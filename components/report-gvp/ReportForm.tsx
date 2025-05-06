@@ -1,5 +1,21 @@
 'use client';
 
+function getISTTimestamp(): string {
+  const now = new Date();
+  const istOffset = 5.5 * 60 * 60 * 1000; // 5.5 hours in milliseconds
+  const istDate = new Date(now.getTime() + istOffset);
+
+  const year = istDate.getUTCFullYear();
+  const month = String(istDate.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(istDate.getUTCDate()).padStart(2, '0');
+  const hours = String(istDate.getUTCHours()).padStart(2, '0');
+  const minutes = String(istDate.getUTCMinutes()).padStart(2, '0');
+  const seconds = String(istDate.getUTCSeconds()).padStart(2, '0');
+
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+}
+
+
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -28,6 +44,7 @@ import { SampleImages } from './SampleImages';
 import { LocationButton } from './LocationButton';
 import FileUpload from './FileUpload';
 import { nanoid } from 'nanoid';
+
 
 const formSchema = z.object({
   garbageLevel: z.enum(['Low', 'Medium', 'High'] as const),
@@ -105,7 +122,7 @@ export function ReportForm() {
           remarks: values.remarks || '',
           location: location,
           media_paths: uploadedPaths,
-          created_at: new Date().toISOString(),
+          created_at: getISTTimestamp(),
         },
       ]);
   
