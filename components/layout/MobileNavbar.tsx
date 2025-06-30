@@ -41,7 +41,7 @@ export function MobileNavbar() {
           <span className="text-xs mt-1">Report</span>
         </Link>
         
-        <Link 
+        {/* <Link 
           href="/dashboard" 
           className={cn(
             "flex flex-col items-center py-3 transition-colors",
@@ -52,7 +52,7 @@ export function MobileNavbar() {
         >
           <BarChart2 className="h-6 w-6" />
           <span className="text-xs mt-1">Dashboard</span>
-        </Link>
+        </Link> */}
       </nav>
     </div>
   );

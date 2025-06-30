@@ -22,11 +22,11 @@ export default function Home() {
               Report GVP <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          {/* <Button asChild variant="outline" size="lg">
             <Link href="/dashboard">
               View Dashboard
             </Link>
-          </Button>
+          </Button> */}
         </div>
       </div>
       

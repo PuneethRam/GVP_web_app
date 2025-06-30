@@ -33,18 +33,18 @@ export function Header() {
         </Link>
         
         <div className="hidden md:flex space-x-4">
-          <Link 
+          {/* <Link 
             href="/report-gvp" 
             className="text-sm font-medium hover:text-blue-600 transition-colors"
           >
             Report
-          </Link>
-          <Link 
+          </Link> */}
+          {/* <Link 
             href="/dashboard" 
             className="text-sm font-medium hover:text-blue-600 transition-colors"
           >
             Dashboard
-          </Link>
+          </Link> */}
         </div>
       </div>
     </header>
