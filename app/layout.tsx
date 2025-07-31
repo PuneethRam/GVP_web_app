@@ -25,20 +25,7 @@ export default function RootLayout({
         </main>
         <MobileNavbar />
         
-        {/* Bolt Badge - Fixed position bottom left */}
-        <a
-          href="https://bolt.new/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed top-4 right-4 z-50 hover:scale-110 transition-transform duration-200 ease-in-out"
-          aria-label="Built with Bolt"
-        >
-          <img
-            src="https://raw.githubusercontent.com/kickiniteasy/bolt-hackathon-badge/main/src/public/bolt-badge/black_circle_360x360/black_circle_360x360.png"
-            alt="Built with Bolt"
-            className="w-20 h-20 md:w-20 md:h-20 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-200"
-          />
-        </a>
+        
       </body>
     </html>
   );
